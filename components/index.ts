@@ -5,7 +5,11 @@ now we can just use the component in our desired file like this: < Hero /> and 
 */
 import Hero from './Hero'
 import CustomButton from './CustomButton'
+import Navbar from './Navbar'
+import Footer from './Footer'
 export {
     Hero, 
-    CustomButton
+    CustomButton, 
+    Navbar, 
+    Footer
 }
