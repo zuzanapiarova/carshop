@@ -7,5 +7,52 @@ export interface CustomButtonProps{
     title: string;
     btnType: "button" | "submit";
     containerStyles?: string;
-    handleClick?: MouseEventHandler<HTMLButtonElement>
+    textStyles?: string;
+    rightIcon?: string;
+    handleClick?: MouseEventHandler<HTMLButtonElement>;
+    isDisabled?: boolean;
 }
+
+export interface SearchManufacturerProps{
+    manufacturer: string;
+    setManufacturer: (manufacturer: string) => void;
+}
+export interface OptionProps{
+    title: string;
+    value: string;
+}
+
+export interface CustomFilterProps{
+    title: string; 
+    options: OptionProps[];  
+}
+
+export interface CarProps{
+    city_mpg: number;
+    type: string;
+    combination_mpg:number;
+    drive: string;
+    fuel_type: string;
+    highway_mpg: number;
+    make:string;
+    model:string;
+    transmission:string;
+    year:2012   
+}
+
+export interface FilterProps{
+    manufacturer?: string; 
+    model?: string;
+    year?: number;
+    fuel?: string;
+    limit?: number;
+}
+
+export interface HomeProps {
+    searchParams: FilterProps;
+  }
+
+  export interface ShowMoreProps{
+    pageNumber: number;
+    isNext: boolean;
+  }
